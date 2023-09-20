@@ -1,0 +1,38 @@
+    {% extends 'student/studentbase.html' %}
+    {% block content %}
+    {%load static%}
+
+    <head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <style media="screen">
+        a:link {
+        text-decoration: none;
+        }
+
+        h6 {
+        text-align: center;
+        }
+
+        .row {
+        margin: 100px;
+        }
+    </style>
+    </head>
+    <br><br>
+    <div class="container">
+    <div class="panel panel-primary rounded-0">
+        <div class="panel-heading rounded-0">
+            <h6 class="panel-title">Available Courses</h6>
+        </div>
+        <video id="video" width="250" height="250" autoplay muted></video>
+        <p id='click_to_record'></p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSefRT9Jarioq86amCb0XKnCDmzDeOh51qUrXn2X_VaIrH8Q5Q/viewform?embedded=true" width="640" height="1165" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+    </div>
+    <script src="{% static 'js/face-api.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <br><br><br><br><br><br>
+    {% endblock content %}
