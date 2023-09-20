@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tab shift alert</title>
+</head>
+<body>
+	<h1>Tab shift alert</h1>
+	<p>Try switching to a different tab or minimizing the browser window.</p>
+	<script src="script.js"></script>
+</body>
+<script>
+    // Check if the page is currently visible
+var isPageVisible = true;
+
+// Add event listener for the visibilitychange event
+document.addEventListener("visibilitychange", function() {
+	// If the page is currently hidden, show an alert
+	if (document.hidden) {
+		isPageVisible = false;
+		alert("You've shifted to a different tab or minimized the browser window.");
+	}
+	// If the page is currently visible, set the isPageVisible flag to true
+	else {
+		isPageVisible = true;
+	}
+});
+
+</script>
+</html>
